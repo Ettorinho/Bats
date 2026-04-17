@@ -12,10 +12,18 @@ color 0A
 :: CONFIGURACION
 :: ==========================================
 
-:: Ruta de la imagen (debe estar en carpeta compartida de red)
-set IMAGEN=\\SERVIDOR\compartido\alerta.jpg
+:: Ruta de la imagen
+:: IMPORTANTE:
+:: - Para equipo local: usa ruta local (ej: C:\imagenes\aviso.jpg)
+:: - Para equipos remotos: usa carpeta compartida de red (ej: \\SERVIDOR\compartido\aviso.jpg)
+:: - La imagen debe ser accesible desde todos los equipos destino
+set IMAGEN=C:\ruta\a\tu\imagen.jpg
 
 :: Archivo con lista de equipos (IPs o nombres)
+:: Formato del archivo equipos.txt:
+::   - Una IP o nombre de equipo por línea
+::   - Líneas vacías o que empiezan con # son ignoradas
+::   - Ejemplos: 10.35.240.230, localhost, PC-OFICINA-01
 set LISTA_EQUIPOS=equipos.txt
 
 :: Tiempo de visualización en segundos (0 = hasta que usuario cierre)
